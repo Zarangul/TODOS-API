@@ -1,0 +1,137 @@
+@import 'reset';
+
+@mixin display-fl-col-cntr {
+  @include fl-col-al-cntr;
+  justify-content: center;
+}
+
+@mixin fl-col-al-cntr {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+@mixin st-height-margin-outline {
+  height: 45px;
+  margin: 15px;
+  outline: none;
+}
+
+$sp-color: darkblue;
+$sp-size: 20px;
+$sp-box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+$st-bor-radius: 5px;
+
+::selection {
+  color: white;
+  background-color: orangered;
+}
+.container {
+  @include display-fl-col-cntr;
+  width: 100%;
+  height: auto;
+  min-height: 100vh;
+  background: #1c92d2;
+  background: -webkit-linear-gradient(to right, #f2fcfe, #1c92d2);
+  background: linear-gradient(to right, #f2fcfe, #1c92d2);
+}
+
+h1 {
+  color: $sp-color;
+  margin-bottom: $sp-size;
+  padding: $sp-size 50px;
+  border-radius: $sp-size;
+  box-shadow: $sp-box-shadow;
+}
+
+.todo-box {
+  @include fl-col-al-cntr;
+  border-radius: $sp-size;
+  box-shadow: $sp-box-shadow;
+  width: 50%;
+  height: auto;
+  min-height: 60vh;
+  background-color: white;
+}
+
+.input-box {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+#input-value {
+  @include st-height-margin-outline;
+  border: 2px solid $sp-color;
+  border-radius: $st-bor-radius;
+  width: 70%;
+  padding: 8px;
+}
+
+#add-btn {
+  @include st-height-margin-outline;
+  border-radius: $st-bor-radius;
+  background-color: $sp-color;
+  width: 15%;
+  border: 2px solid transparent;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+#ul-box {
+  width: 90%;
+  list-style: none;
+}
+
+.in-li {
+  border-radius: $st-bor-radius;
+  margin: 15px 0;
+  padding: 8px;
+  border: 2px solid #c1f0fa;
+  background-color: #f2fcfe;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  overflow-y: auto;
+}
+
+.in-span-2, .edit {
+  background-color: $sp-color;
+  border-radius: $st-bor-radius;
+  color: white;
+  padding: 8px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.in-span-2:hover, .edit:hover {
+  background-color: #080d9e;
+}
+
+$layout-breakpoint-lg: 960px;
+$layout-breakpoint-sm: 768px;
+
+@media (max-width: $layout-breakpoint-lg) {
+  .todo-box {
+    width: 65%;
+
+    @media (max-width: $layout-breakpoint-lg) {
+      width: 75%;
+      min-height: 80vh;
+    }
+  }
+}
+
+@media (max-width: $layout-breakpoint-lg) {
+
+  #input-value,
+  #add-btn {
+    margin: 15px 7px;
+  }
+
+  h1 {
+    font-size: 18px;
+  }
+}

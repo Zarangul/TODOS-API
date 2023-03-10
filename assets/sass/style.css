@@ -31,12 +31,14 @@ button {
   width: 100%;
   height: auto;
   min-height: 100vh;
-  background: #1c92d2;
-  background: linear-gradient(to right, #f2fcfe, #1c92d2);
+  background-color: #080355;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 1000'%3E%3Cg %3E%3Ccircle fill='%23080355' cx='50' cy='0' r='50'/%3E%3Cg fill='%230e075d' %3E%3Ccircle cx='0' cy='50' r='50'/%3E%3Ccircle cx='100' cy='50' r='50'/%3E%3C/g%3E%3Ccircle fill='%23140c64' cx='50' cy='100' r='50'/%3E%3Cg fill='%2319116c' %3E%3Ccircle cx='0' cy='150' r='50'/%3E%3Ccircle cx='100' cy='150' r='50'/%3E%3C/g%3E%3Ccircle fill='%231e1774' cx='50' cy='200' r='50'/%3E%3Cg fill='%23221c7c' %3E%3Ccircle cx='0' cy='250' r='50'/%3E%3Ccircle cx='100' cy='250' r='50'/%3E%3C/g%3E%3Ccircle fill='%23272184' cx='50' cy='300' r='50'/%3E%3Cg fill='%232b268c' %3E%3Ccircle cx='0' cy='350' r='50'/%3E%3Ccircle cx='100' cy='350' r='50'/%3E%3C/g%3E%3Ccircle fill='%23302b95' cx='50' cy='400' r='50'/%3E%3Cg fill='%2334309d' %3E%3Ccircle cx='0' cy='450' r='50'/%3E%3Ccircle cx='100' cy='450' r='50'/%3E%3C/g%3E%3Ccircle fill='%233836a5' cx='50' cy='500' r='50'/%3E%3Cg fill='%233c3bae' %3E%3Ccircle cx='0' cy='550' r='50'/%3E%3Ccircle cx='100' cy='550' r='50'/%3E%3C/g%3E%3Ccircle fill='%234140b7' cx='50' cy='600' r='50'/%3E%3Cg fill='%234546bf' %3E%3Ccircle cx='0' cy='650' r='50'/%3E%3Ccircle cx='100' cy='650' r='50'/%3E%3C/g%3E%3Ccircle fill='%23494bc8' cx='50' cy='700' r='50'/%3E%3Cg fill='%234c51d1' %3E%3Ccircle cx='0' cy='750' r='50'/%3E%3Ccircle cx='100' cy='750' r='50'/%3E%3C/g%3E%3Ccircle fill='%235057da' cx='50' cy='800' r='50'/%3E%3Cg fill='%23545ce3' %3E%3Ccircle cx='0' cy='850' r='50'/%3E%3Ccircle cx='100' cy='850' r='50'/%3E%3C/g%3E%3Ccircle fill='%235862ec' cx='50' cy='900' r='50'/%3E%3Cg fill='%235b68f6' %3E%3Ccircle cx='0' cy='950' r='50'/%3E%3Ccircle cx='100' cy='950' r='50'/%3E%3C/g%3E%3Ccircle fill='%235F6EFF' cx='50' cy='1000' r='50'/%3E%3C/g%3E%3C/svg%3E");
+  background-attachment: fixed;
+  background-size: contain;
 }
 
 h1 {
-  color: darkblue;
+  color: white;
   margin-bottom: 20px;
   padding: 20px 50px;
   border-radius: 20px;
@@ -102,8 +104,13 @@ h1 {
   overflow-y: auto;
 }
 
+.edit-delete-icon {
+  width: 70px;
+  display: flex;
+  justify-content: space-between;
+}
+
 .in-span-2, .edit {
-  background-color: darkblue;
   border-radius: 5px;
   color: white;
   padding: 8px;
@@ -111,8 +118,20 @@ h1 {
   transition: all 0.3s;
 }
 
-.in-span-2:hover, .edit:hover{
+.in-span-2 {
+  background-color: darkblue;
+}
+
+.edit {
+  background-color: red;
+}
+
+.in-span-2:hover {
   background-color: #080d9e;
+}
+
+.edit:hover {
+  background-color: rgb(202, 13, 13);
 }
 
 @media (max-width: 960px) {
